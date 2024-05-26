@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "VPN SITE TO SITE WIREGUARD MIKROTIK"
+title:  "Configuracion de WireGuard en Mikrotik"
 categories: AI
 tags:  Mikrotik
 author: Juan Samuel FP
