@@ -1,47 +1,42 @@
-{% include header.html %}
-    <div class="wrapper">
-      <div class="content">
-        <div class="container container-center">
-          <div class="row">
-            <div class="col-md-8 offset-md-1">
-              <div class="article">
-                <div class="card">
-                  <h1><a href="{{ page.url | relative_url }}">{{ page.title }}</a></h1>
-                  <div class="post-meta">
-                    <div class="post-time">
-                      <i class="fa fa-calendar-alt"></i>
-                      <time>{{ page.date | date_to_string }}</time>
-                    </div>
-                    <ul>
-                      {% for tag in page.tags %}
-                        <li><a href="{{ '/tag/' | append: tag | relative_url }}">{{ tag }}</a></li>
-                      {% endfor %}
-                    </ul>
-                  </div>
-                  <div class="post-content">
-                    {% if page.toc %}
-                      {% include toc.html html=content class='toc' %}
-                    {% endif %}
-                    {{ content }}
-                    {% include share.html %}
-                  </div>
-                  {% if page.comments %}
-                  <div id="disqus_thread">
-                    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-                  </div>
-                  {% endif %}
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 hidden-xs">
-              {% include sidebar.html %}
-            </div>
-          </div>
-        </div>
-        {% include disqus-comments.html %}
+---
+layout: default
+---
+
+<div class="row justify-content-center" id="blog-post-container">
+  <div class="col-lg-10">
+    {%- include blog_post_article.html -%}
+     {%- include blog_post_comments.html-%}
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-header">About {{site.author}}</div>
+      <div class="card-body">
+        <p class="author_bio">{{ site.author_bio }}</p>
+        {%- include github_star_button.html -%}
       </div>
-      {% include footer.html %}
     </div>
-  </body>
-</html>
+  </div>
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-header">Categories</div>
+      <div class="card-body text-dark">
+        {%- include blog_categories.html -%}
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-header">Useful Links</div>
+      <div class="card-body text-dark">
+        {% for i in site.urls %}
+        <li>
+          <a href="{{ site.url}}{{site.baseurl}}{{ i.url }}">{{ i.text }}</a>
+        </li>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+

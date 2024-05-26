@@ -1,8 +1,5 @@
 ---
-layout: page 
 title: About
-
+layout: about-me
+permalink: /about/
 ---
-
-# Some info 
-...about how cool you are ;)
