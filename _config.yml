@@ -1,56 +1,250 @@
-# Jekyll configuration
+# This file contains configuration flags to customize your site
 
-name: Blog Name
-description: Software Developer
+# Name of your site (displayed in the header)
+name: "Casjays Developments"
 
-# Url is currently only used only for the RSS feed in feed.xml
-url: http://streetturtle.github.io
-#url: http://localhost:4000
+# Short bio or description (displayed in the header)
+description: "Casjays Developments Security Blog"
 
-# For a project page here should be a project name. Otherwise (for user's/organization's page leave it empty)
-baseurl: '/jekyll-clean-dark'
+# site tagline
+tagline: "Nothing is secure!"
 
-author: Pavel Makhov
-copyright: 2015-2018
+# URL of your avatar or profile pic (you could use your GitHub profile pic)
+avatar: "https://avatars2.githubusercontent.com/u/46037693?s=200&v=4"
 
-share:
-  facebook: true
-  twitter: true
-  gplus: true
-  linkedin: true
-  pinterest: true
-  email: true
+# full URI IE: /mysite { Do not add trailing / }
+baseurl: ""
 
-social:
-  github: streetturtle
-  stackoverflow: ''
-  linkedin:
-  instagram: ''
-  lastfm: ''
-  rss: feed.xml
+# set site author
+author:
+  name: casjaysdev
+  url: http://casjay.pro
 
-# Google Analytics key, leave blank to ignore
-google_analytics_key:
-# Yandex metrica (https://metrica.yandex.com/) leave blank to ignore or put true to use
-yandex_metrica:
+# set url for the contact form
+form:
+  submit_url: https://cgi.casjay.pro/email.cgi
 
+# only set one of columns_ to enabled
+# set a custom theme - includes/themes
+# hacker
+custom_theme:
+  name: hacker
+  columns: "3"
+  footer: casjays-footer.html
+  header: casjays-header.html
+  nav:
+    bar: true
+    external: true
+    internal: true
+    top: nav/top.html
+    right: nav/sidebars/right.html
+    left: nav/sidebars/left.html
 
-# Set this to your disqus shortname to enable comments. Note that the 'comments'
-# setting below must also be true. Individual posts can override 'comments' to
-# disable on a post-by-post basis
-disqus: streetturtle
-comments: false
+# set default timezone
+timezone: America/New_York
 
-permalink: /:year/:month/:title/
+# set locale
+locale: "en"
 
-# Enable for using pages, more details are here: http://jekyllrb.com/docs/pagination/
-#paginate: 3
+# Seperator for the the excerps
+excerpt_separator: "\n\n"
 
-#highlighter: rouge
+# Set social media urls
+share-this:
+  rss: true
+  code: 5acc08103368f4001495b647
+  repo: https://github.com/casjaysdev-sites/hak.casjay.pro
+  email:
+  enabled:
+    footer: true
+    script: true
 
-markdown: kramdown
+# Includes an icon for each username you enter
+social-links:
+  rss: true
+  name: casjay
+  github: casjay
+  twitter: casjay
+  facebook: casjaysdev
+  flickr: casjay
+  instagram: casjay
+  linkedin: casjay
+  pinterest: casjaysdev
+  email: casjay@cock.li
+  show_social: true
+
+# Verfication Settings
+webmaster_verifications:
+  google: 12345
+  bing: 12345
+  alexa: 12345
+  yandex: 12345
+  baidu: 12345
+
+# github options
+github:
+  show: false
+  repo:
+  user:
+  avatar:
+  forkme: false
+
+# Enable/Disable footer sections
+options:
+  engine: true
+  sharethis: true
+  legal: true
+  statcounter: true
+  google: true
+  ads: true
+  eucookie: true
+  rocketchat: true
+  piwik: true
+  discord: true
+
+# // TODO: Blog settings advanced feature
+blog:
+  enabled:
+  api:
+
+feed:
+  path: /rss.xml
+  posts_limit: 20
+
+# You can find your shortname on the Settings page of your Disqus account
+disqus: casjay
+
+# Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
+google:
+  analytics: UA-936146-1
+
+# piwik code
+piwik:
+  pre: https
+  id:
+  url:
+
+rocketchat:
+  url:
+
+discord:
+  enable: true
+  server: 430838999876108289
+  channel: 430838999876108291
+  horizontal: bottom
+  vertical: left
+
+statuscounter:
+  id: 8585230
+  code: ef07ac24
+  url: //c.statcounter.com/8585230/0/ef07ac24/0/
+
+# Name of theme
+#theme: jekyll-theme-slate
+
+# You don't need to change any of the configuration flags below !!
+permalink: pretty
+
+tag_page: "/blog/tags/"
+category_page: "/blog/categories/"
+
+collections:
+  posts:
+    output: true
+    permalink: "/blog/:year/:month/:day/:title/"
+  tags:
+    output: true
+    permalink: "/blog/tags/:path/"
+  docs:
+    permalink: "/docs/:path/"
+    output: true
+  tutorials:
+    output: true
+    permalink: /howto/:name
+  issues:
+    output: true
+    permalink: /issues/:name
+  wiki:
+    output: true
+    permalink: /wiki/:name
+  recipes:
+    output: true
+    permalink: /recipes/:name
+  security:
+    output: true
+    permalink: /security/:name
+
+redirect_from:
+  json: true
+
+defaults:
+  - scope:
+      path: _docs
+      type: docs
+    values:
+      layout: docs
+  - scope:
+      path: _posts
+      type: posts
+    values:
+      layout: posts
+  - scope:
+      path: images
+      type: images
+    values:
+      layout: images
+
+# Jekyll 3 now only supports Kramdown for Markdown
 kramdown:
-  input: GFM # Enable GitHub Flavored Markdown (fenced code blocks)
-  hard_wrap: true
+  footnote_backlink: "&#x21A9;&#xFE0E;"
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: "highlight"
 
-exclude: ['README.md', 'LICENSE']
+# Set the Sass partials directory, as we're using @imports
+sass:
+  sass_dir: _sass
+  style: :expanded
+
+jekyll_tidy:
+  compress_html: true
+  exclude: ["*.md"]
+
+# Use the following plug-ins
+plugins:
+  - jemoji
+  - kramdown
+  - jekyll-avatar
+  - jekyll-feed
+  - jekyll-mentions
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-gist
+  - jekyll-coffeescript
+  - jekyll-assets
+  - jekyll-sitemap
+  - jekyll-analytics
+  - jekyll-remote-include
+  - jekyll-menus
+  - jekyll-remote-theme
+  - jekyll-tidy
+
+include:
+  - _pages
+  - images
+
+# Exclude these files from your production _site
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - CNAME
+  - .keep
+  - .gitkeep
+
+# full domain name IE: httmp://mysite.com
+url:
+#webrick:
+#  headers:
+#    Access-Control-Allow-Origin: "*"
