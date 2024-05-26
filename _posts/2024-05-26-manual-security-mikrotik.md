@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Manual de Seguridad para Router Mikrotik"
-categories: Three.js
+categories: Network
 tags:  Mikrotik
 author: Juan Samuel FP
 ---
