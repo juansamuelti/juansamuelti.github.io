@@ -1,1 +1,1 @@
-[Visita mi página web de inicio](https://juansamuelti.github.io/Inicio)
+[Visita mi página web de inicio](https://juansamuelti.github.io)
