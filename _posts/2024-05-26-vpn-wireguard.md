@@ -2,7 +2,7 @@
 layout: post
 title:  "VPN SITE TO SITE WIREGUARD MIKROTIK"
 categories: AI
-tags:  MIKROTIK
+tags:  Mikrotik
 author: Juan Samuel FP
 ---
 

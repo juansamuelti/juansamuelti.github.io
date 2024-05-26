@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "摩天轮动画的实现揭秘"
+title:  "Empezando en Mikrotik"
 categories: JavaScript
-tags:  Animation
-author: HyG
+tags:  Mikrotik
+author: Juan Samuel FP
 ---
 
 * content

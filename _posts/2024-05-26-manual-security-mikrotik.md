@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Three.js 之 19 realistic render 真实渲染"
+title:  "Manual de Seguridad para Router Mikrotik"
 categories: Three.js
-tags:  Three.js WebGL
-author: HyG
+tags:  Mikrotik
+author: Juan Samuel FP
 ---
 
 * content
