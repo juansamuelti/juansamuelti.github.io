@@ -1,8 +1,14 @@
 ---
-layout: page 
+layout: page
 title: About
-
 ---
 
-# Some info 
-...about how cool you are ;)
+# About
+
+## ...this blog
+
+Nothing left.
+
+## ...me
+
+Nothing left.

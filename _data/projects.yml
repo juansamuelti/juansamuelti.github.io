@@ -1,0 +1,8 @@
+projects:
+
+  - name: Jekyll Clean Dark
+    description: Theme for Jekyll - static site generator. After creating theme for my blog I shared it on github.
+    technologies: HTML/CSS/Bootstrap
+    links:
+      github: https://github.com/streetturtle/jekyll-clean-dark
+      site: http://pavelmakhov.com/jekyll-clean-dark/
