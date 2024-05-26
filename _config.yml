@@ -1,16 +1,13 @@
 title: My Cybersecurity Projects
-description: > # esta descripción puede ser multilinea
-  Portafolio profesional de proyectos de ciberseguridad.
-baseurl: "" # la URL base para este proyecto, deja en blanco si está en la raíz
-url: "https://tu-usuario.github.io" # la URL completa de tu sitio
-
+description: "Portafolio profesional de proyectos de ciberseguridad."
+baseurl: ""
+url: "https://tu-usuario.github.io"
 theme: minimal-mistakes-jekyll
 
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
-# Excluir archivos y directorios específicos
 exclude:
   - README.md
   - Gemfile
