@@ -1,0 +1,18 @@
+title: My GitHub Pages Site
+description: > # este signo `>` significa que la descripción puede ser multilinea
+  Bienvenidos a mi sitio web personalizado en GitHub Pages.
+baseurl: "" # la URL base para este proyecto, deja en blanco si está en el root
+url: "https://tu-usuario.github.io" # la URL completa de tu sitio
+
+theme: minima # puedes usar un tema predeterminado o omitir esto si usas una plantilla personalizada
+
+# Excluir archivos y directorios específicos
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# Configuración del markdown
+markdown: kramdown
