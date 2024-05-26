@@ -6,7 +6,6 @@ url: "https://juansamuelti.github.io" # the base hostname & protocol for your si
 permalink: /:year/:month/:day/:title/
 
 # other links
-twitter_username:
 facebook_username: Juan Samuel FP
 github_username:  juansamuelti
 email: juansamuelfp@outlook.com
