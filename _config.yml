@@ -1,10 +1,14 @@
-title: My GitHub Pages Site
-description: > # este signo `>` significa que la descripción puede ser multilinea
-  Bienvenidos a mi sitio web personalizado en GitHub Pages.
-baseurl: "" # la URL base para este proyecto, deja en blanco si está en el root
+title: My Cybersecurity Projects
+description: > # esta descripción puede ser multilinea
+  Portafolio profesional de proyectos de ciberseguridad.
+baseurl: "" # la URL base para este proyecto, deja en blanco si está en la raíz
 url: "https://tu-usuario.github.io" # la URL completa de tu sitio
 
-theme: minima # puedes usar un tema predeterminado o omitir esto si usas una plantilla personalizada
+theme: minimal-mistakes-jekyll
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
 
 # Excluir archivos y directorios específicos
 exclude:
@@ -14,5 +18,4 @@ exclude:
   - node_modules
   - vendor
 
-# Configuración del markdown
 markdown: kramdown
