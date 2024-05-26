@@ -1,59 +1,63 @@
-# Jekyll configuration
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
 
-name: Ling@Concordia
-description: Nil
+# Site settings
+title: HyG
+brief-intro: Front-end Dev Engineer
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://gaohaoyang.github.io" # the base hostname & protocol for your site
 
-url: "https://lingt.xyz"
-#url: http://localhost:4000
+permalink: /:year/:month/:day/:title/
 
-# For a project page here should be a project name. Otherwise (for user's/organizaion's page leave it empty)
-baseurl: '/jekyll-clean-dark'
+# other links
+twitter_username:
+facebook_username: gaohaoyang.water
+github_username:  Gaohaoyang
+email: gaohaoyang126@126.com
+weibo_username: 3115521wh
+zhihu_username: gaohaoyang
+linkedIn_username: gaohaoyang
+dribbble_username:
 
-social:
-  github: lingt-xyz
-  stackoverflow: 
-  linkedin: 
-  codepen: 
-  instagram: 
-  lastfm: 
-  rss: feed.xml
+description_footer: 本站记录我前端之旅的沿途风景！
 
-share:
-  facebook: false
-  twitter: false
-  gplus: false
-  linkedin: false
-  pinterest:
-  email: false
+# comments
+# two ways to comment, only choose one, and use your own short name
+# 两种评论插件，选一个就好了，使用自己的 short_name
+duoshuo_shortname: #hygblog
+disqus_shortname: gaohaoyang
 
-collections:
-  notes:
-    output: true
+# statistic analysis 统计代码
+# 百度统计 id，将统计代码替换为自己的百度统计id，即
+# hm.src = "//hm.baidu.com/hm.js?xxxxxxxxxxxx";
+# xxxxx字符串
+baidu_tongji_id: cf8506e0ef223e57ff6239944e5d46a4
+google_analytics_id: UA-72449510-4 # google 分析追踪id
 
-# Google Analytics key, leave blank to ignore
-google_analytics_key: 
-# Yandex metrika (https://metrica.yandex.com/) leave blank to ignore or put true to use
-yandex_metrika: false
+# Build settings
+markdown: kramdown
 
-# Set this to your disqus shortname to enable comments. Note that the 'comments'
-# setting below must also be true. Individual posts can override 'comments' to
-# disable on a post-by-post basis
-disqus: 
-comments: false
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
-permalink: /:year/:month/:title/
+# port
+# port: 1234
+
+# url
+category_dir: category/
+tag_dir: tag/
+
+# excerpt
+excerpt_separator: "\n\n\n\n"
+
+# paginate
 gems: [jekyll-paginate]
 paginate: 10
-excerpt_separator: <!--more-->
 
-mathjax: false
-
-#highlighter: rouge
-#markdown: redcarpet
-#redcarpet:
-#  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
-markdown: kramdown
-kramdown:
-  input: GFM # Enable GitHub Flavored Markdown (fenced code blocks)
-
-exclude: ['README.md', 'LICENSE', vendor]
+plugins:
+  - jekyll-paginate
