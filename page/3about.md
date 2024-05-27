@@ -9,4 +9,3 @@ type: page
 * content
 {:toc}
 
-Hola
