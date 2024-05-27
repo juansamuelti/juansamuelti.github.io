@@ -9,24 +9,10 @@ author: Juan Samuel FP
 * content
 {:toc}
 
----
-layout: post
-title: "Empezando en Mikrotik"
-categories: Network
-tags: Mikrotik
-author: Juan Samuel FP
----
-
-* content
-{:toc}
-
 # Introducción
 
 Mikrotik es una empresa letona que produce hardware y software para la conectividad a Internet, incluyendo routers y sistemas operativos para redes. En esta guía, veremos cómo empezar con Mikrotik.
 
-![Router Mikrotik]({{ "/assets/images/mikrotik/router.jpg" | relative_url }})
-
-## Primeros Pasos
 
 ### Configuración Inicial
 
@@ -35,6 +21,7 @@ Para empezar a trabajar con un router Mikrotik, primero debemos realizar la conf
 1. Conecta el router a tu computadora mediante un cable Ethernet.
 2. Accede a la interfaz web del router ingresando su dirección IP en tu navegador.
 3. Utiliza las credenciales predeterminadas para iniciar sesión (normalmente usuario: `admin` y contraseña: `(dejar en blanco)`).
+
 
 ### Configuración de la Red
 
