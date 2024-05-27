@@ -1,15 +1,14 @@
-// 先等图片都加载完成
-// 再执行布局函数
+
 
 /**
- * 执行主函数
+ * 
  * @param  {[type]} function( [description]
  * @return {[type]}           [description]
  */
 (function() {
 
   /**
-   * 内容JSON
+   * 
    */
   var demoContent = [
     {
@@ -199,12 +198,12 @@
     },
   ]
 
-  contentInit(demoContent) //内容初始化
+  contentInit(demoContent) //
   initGrid()
 }());
 
 /**
- * 内容初始化
+ * 
  * @return {[type]} [description]
  */
 function contentInit(content) {
@@ -245,7 +244,7 @@ function contentInit(content) {
 }
 
 /**
- * 初始化栅格布局
+ * 
  * @return {[type]} [description]
  */
 function initGrid() {
