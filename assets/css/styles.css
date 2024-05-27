@@ -1,0 +1,22 @@
+/* Modo claro (por defecto) */
+body {
+    background-color: white;
+    color: black;
+  }
+  
+  /* Modo oscuro */
+  body.dark-mode {
+    background-color: black;
+    color: white;
+  }
+  
+  /* Botón de alternancia */
+  .toggle-button {
+    padding: 0.5rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }
+  

@@ -2,7 +2,13 @@
 <html>
 
   {% include head.html %}
-
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ "/assets/css/styles.css" | relative_url }}">
+  </head>
+  
   <body>
 
     {% include header.html %}
@@ -21,6 +27,11 @@
       });
     </script>
     <!-- <script src="{{ " /js/scroll.min.js " | prepend: site.baseurl }}" charset="utf-8"></script> -->
+  </body>
+
+  <body>
+    {{ content }}
+    <script src="{{ "/assets/js/scripts.js" | relative_url }}"></script>
   </body>
 
 </html>

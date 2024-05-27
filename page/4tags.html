@@ -1,62 +1,57 @@
 ---
 layout: default
-title: Tags
-permalink: /tag/
-icon: tags
+title: Modo Oscuro
+permalink: /modo-oscuro/
+icon: moon-o
 type: page
 ---
 
-<div class="page clearfix">
-    <div class="left">
-        <h1>{{page.title}}</h1>
-        <hr>
-        {% capture tags %}
-          {% for tag in site.tags %}
-            {{ tag[0] }}
-          {% endfor %}
-        {% endcapture %}
-        {% assign sortedtags = tags | split:' ' | sort %}
-
-        <ul>
-        {% for tag in sortedtags %}
-          <h2 id="{{ tag }}">{{ tag }}</h2>
-          {% for post in site.tags[tag] %}
-            <li>
-                <time>
-                {{ post.date | date:"%F" }} {{ post.date | date: "%a" }}.
-                </time>
-                <a class="title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-
-                {% include category.html %}
-                {% include tag.html %}
-            </li>
-          {% endfor %}
-        {% endfor %}
-        </ul>
-
-    </div>
-    <button class="anchor"><i class="fa fa-anchor"></i></button>
-    <div class="right">
-        <div class="wrap">
-
-            <!-- Content -->
-            <div class="side content">
-                <div>
-                    Content
-                </div>
-                <ul id="content-side" class="content-ul">
-                    {% for tag in sortedtags %}
-                    <li>
-                        <a data-scroll href="#{{ tag }}">
-                            {{ tag }} ({{ site.tags[tag].size }})
-                        </a>
-                    </li>
-                    {% endfor %}
-
-                </ul>
-            </div>
-            <!-- <div class="side">Juan Samuel FP</div> -->
-        </div>
-    </div>
+<div class="mode-toggle-page">
+  <h1>{{ page.title }}</h1>
+  <button id="mode-toggle-button" class="toggle-button">Toggle Dark Mode</button>
 </div>
-<script src="{{ "/js/pageContent.js " | prepend: site.baseurl }}" charset="utf-8"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const toggleButton = document.getElementById('mode-toggle-button');
+
+  // Check local storage for mode preference
+  const currentMode = localStorage.getItem('color-mode');
+  if (currentMode === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  toggleButton.addEventListener('click', function () {
+    document.body.classList.toggle('dark-mode');
+    let mode = 'light';
+    if (document.body.classList.contains('dark-mode')) {
+      mode = 'dark';
+    }
+    localStorage.setItem('color-mode', mode);
+  });
+});
+</script>
+
+<style>
+/* Modo claro (por defecto) */
+body {
+  background-color: white;
+  color: black;
+}
+
+/* Modo oscuro */
+body.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+/* Botón de alternancia */
+.toggle-button {
+  padding: 0.5rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+</style>
