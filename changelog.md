@@ -1,70 +1,159 @@
-## Changelog
+# Change Log
 
-Public releases are all root nodes.  
-Incremental version bumps that were not released publicly are nested where appropriate.
+All notable changes to this project will be documented in this file.
 
-P.S. If there is a standard (popular) changelog format, please let me know.
+The format is based on [Keep a Changelog](http://keepachangelog.com/)
+and this project adheres to [Semantic Versioning](http://semver.org/).
 
-- **0.3.0 : 2013.02.24**
-    - **Features**
-    - Update twitter bootstrap to 2.2.2. Add responsiveness and update design a bit.
-    - @techotaku fixes custom tagline support (finally made it in!)
-    - @opie4624 adds ability to set tags from the command-line.
-    - @lax adds support for RSS feed. Adds rss and atom html links for discovery.
-    - Small typo fixes.
+## [1.4.5] - 2021-07-05
 
-    - **Bug Fixes**
-    - @xuhdev fixes theme:install bug which does not overwrite theme even if saying 'yes'.
+## Added
+- Add translation keys for CV layout. [#145](https://github.com/mmistakes/jekyll-theme-basically-basic/pull/145)
+- Display 'Posts' header only if the site has posts. [#144](https://github.com/mmistakes/jekyll-theme-basically-basic/pull/144)
 
-- **0.2.13 : 2012.03.24**   
-    - **Features**
-    - 0.2.13 : @mjpieters Updates pages_list helper to only show pages having a title.
-    - 0.2.12 : @sway recommends showing page tagline only if tagline is set.
-    - 0.2.11 : @LukasKnuth adds 'description' meta-data field to post/page scaffold.
+## Changed
+- Improve remote theme upgrading documentation.
+- Simplify image assigns.
+### Fixed
+- Fix to use current `bundle info` syntax. [#127](https://github.com/mmistakes/jekyll-theme-basically-basic/pull/127)
+- Add `relative_url` filter to author profile image. [#125](https://github.com/mmistakes/jekyll-theme-basically-basic/issues/125)
+- Fix rake vulnerability in `.gemspec` file.
 
-    - **Bug Fixes**
-    - 0.2.10 : @koriroys fixes typo in atom feed
+## [1.4.4] - 2019-08-20
 
-- **0.2.9 : 2012.03.01**   
-    - **Bug Fixes**
-    - 0.2.9 : @alishutc Fixes the error on post creation if date was not specified.
+### Fixed
+- Fix MIME-type issues with Lunr search by renaming `search-data.json` to `lunr/lunr.store.js`. [#82](https://github.com/mmistakes/jekyll-theme-basically-basic/issues/82)
 
-- **0.2.8 : 2012.03.01**   
-    - **Features**
-    - 0.2.8 : @metalelf0 Added option to specify a custom date when creating post.
-    - 0.2.7 : @daz Updates twitter theme framework to use 2.x while still maintaining core layout. #50
-              @philips and @treggats add support for page.tagline metadata. #31 & #48
-    - 0.2.6 : @koomar Adds Mixpanel analytics provider. #49
-    - 0.2.5 : @nolith Adds ability to load custom rake scripts. #33
-    - 0.2.4 : @tommyblue Updated disqus comments provider to be compatible with posts imported from Wordpress. #47
+## [1.4.3] - 2019-08-20
 
-    - **Bug Fixes**
-    - 0.2.3 : @3martini Adds Windows MSYS Support and error checks for git system calls. #40
-    - 0.2.2 : @sstar Resolved an issue preventing disabling comments for individual pages #44
-    - 0.2.1 : Resolve incorrect HOME\_PATH/BASE\_PATH settings
+### Changed
+- Relax Jekyll dependency to allow for version 4.0.
 
-- **0.2.0 : 2012.02.01**   
-  Features
-    - Add Theme Packages v 0.1.0
-      All themes should be tracked and maintained outside of JB core.
-      Themes get "installed" via the Theme Installer.
-      Theme Packages versioning is done separately from JB core with
-      the main intent being to make sure theme versions are compatible with the given installer.
+## [1.4.2] - 2019-07-18
 
-    - 0.1.2 : @jamesFleeting adds facebook comments support
-    - 0.1.1 : @SegFaultAX adds tagline as site-wide configuration
+### Added
+- Document `site.copyright` override for customizing footer copyright text.
 
-- **0.1.0 : 2012.01.24**   
-  First major versioned release.   
-  Features   
-    - Standardize Public API
-    - Use name-spacing and modulation where possible.
-    - Ability to override public methods with custom code.
-    - Publish the theme API.
-    - Ship with comments, analytics integration.
-  
-- **0.0.1 : 2011.12.30**    
-  First public release, lots of updates =p
-  Thank you everybody for dealing with the fast changes and helping
-  me work out the API to a manageable state.
-  
+### Changed
+- Update links to LICENSE. [#102](https://github.com/mmistakes/jekyll-theme-basically-basic/pull/102)
+- Update GitHub issue templates.
+
+### Fixed
+- Fix theme text strings for `search_placeholder_text` and `results_found`. [#104](https://github.com/mmistakes/jekyll-theme-basically-basic/issues/104)
+- Remove stray `console.log` from lunr-search-scripts [#105](https://github.com/mmistakes/jekyll-theme-basically-basic/pull/105)
+- Add missing `/` in icon-gitlab.html. [#80](https://github.com/mmistakes/jekyll-theme-basically-basic/pull/80)
+
+## [1.4.1] - 2018-08-07
+
+### Added
+- Add sample "404 not found page" to `/docs/404.html` and `/example/404.html`. [#12](https://github.com/mmistakes/jekyll-theme-basically-basic/issues/12)
+
+### Changed
+- Adjust default skin colors to meet WCAG 2 AA. [#68](https://github.com/mmistakes/jekyll-theme-basically-basic/pull/68)
+
+### Fixed
+- Remove extra footer from cv.html `layout`. [#69](https://github.com/mmistakes/jekyll-theme-basically-basic/pull/69)
+- Fix JavaScript error when search is not enabled. [#66](https://github.com/mmistakes/jekyll-theme-basically-basic/pull/66)
+
+## [1.4.0] - 2018-04-02
+
+### Changed
+- Lint JavaScript.
+- Update gemspec to use jekyll-seo-tag version `2.4`. [#47](https://github.com/mmistakes/jekyll-theme-basically-basic/pull/47)
+
+### Added
+- Accessibility enhancements for Lunr search form.
+- Add SCSS `$intro-image-color-overlay` variable to enable color overlay on hero images (disabled by default). [#55](https://github.com/mmistakes/jekyll-theme-basically-basic/issues/55)
+- Add new archive layouts: `posts`, `categories`, `category`, `collection`, `tag`, and `tags`.
+- Add grid layout via `entries_layout: grid` front matter.
+- Add support for image thumbnails vial `image.thumbnail` front matter.
+
+### Fixed
+- Fix Firefox [flexbox bug](https://bugzilla.mozilla.org/show_bug.cgi?id=939897) when printing pages.
+- Fix search excerpts that run together because of implied spaces.
+- Moved `<footer>` outside of `<main>` to be semantically correct.
+
+## [1.3.1] - 2018-02-16
+
+### Changed
+- Only include jQuery when using default Lunr search. [#49](https://github.com/mmistakes/jekyll-theme-basically-basic/issues/49)
+
+### Fixed
+- Focus on search input after clicking on toggle.
+
+## [1.3.0] - 2018-02-16
+
+### Added
+- Add jQuery script.
+- Add site-wide search toggle.
+- Add support for [Lunr](https://lunrjs.com/) search. [#48](https://github.com/mmistakes/jekyll-theme-basically-basic/pull/48)
+- Add support for [Algolia](https://www.algolia.com/) search. [#48](https://github.com/mmistakes/jekyll-theme-basically-basic/pull/48)
+- Add [Algolia search demo](https://mmistakes.github.io/jekyll-theme-basically-basic-algolia-search/).
+
+### Changed
+- New installation and upgrade instructions.
+- Absolutely position navigation menu instead of sticking it to the top.
+- Visually hide "Menu" label.
+- Improve alignment of menu toggle when search is enabled.
+
+### Fixed
+- Fix `border-bottom` for Gist line numbers.
+
+## [1.2.0] - 2018-01-05
+
+### Added
+- Use [jekyll-remote-theme](https://github.com/benbalter/jekyll-remote-theme) for demo site.
+
+### Changed
+- Update GitHub Pages compatible installation instructions to include jekyll-remote-theme method.
+- Update `site.gems` references to `site.plugins`. [#39](https://github.com/mmistakes/jekyll-theme-basically-basic/pull/39)
+- Update license and copyright.
+- Improve syntax highlighting styles and colors.
+
+### Fixed
+- Fix primary navigation skip link to use correct anchor ID. [#41](https://github.com/mmistakes/jekyll-theme-basically-basic/pull/41)
+- Fix Susy deprecation warnings by updating to version 3. [#21](https://github.com/mmistakes/jekyll-theme-basically-basic/issues/21)
+
+## [1.1.3] - 2017-10-19
+
+### Fixed
+- Fix `{nil, "picture"=>nil"}` in `_layouts/about.html` when author image isn't set. [#34](https://github.com/mmistakes/jekyll-theme-basically-basic/issues/34)
+
+## [1.1.2] - 2017-09-14
+
+### Fixed
+- Adjust `/_sass/_print.scss` to reduce blank pages when printing in Chrome. [#29](https://github.com/mmistakes/jekyll-theme-basically-basic/issues/29)
+- Fix sidebar visibility bug in Firefox and Safari by adding toggling `visibility: hidden`. [#31](https://github.com/mmistakes/jekyll-theme-basically-basic/issues/31) 
+
+## [1.1.1] - 2017-09-06
+
+### Changed
+- Change `gems` key in `_config.yml` to `plugins`. [#23](https://github.com/mmistakes/jekyll-theme-basically-basic/pull/23)
+
+### Fixed
+- Fix Liquid syntax error: "Expected id but found end_of_string_in `cv.skills.`" in `/cv/skills.html` include.
+
+## [1.1.0] - 2017-03-30
+
+### Added
+- Improve installation documentation. [#8](https://github.com/mmistakes/jekyll-theme-basically-basic/issues/8)
+- Add Google Analytics tracking ID, Disqus comments, to `/docs` demo site.
+
+### Changed
+- Change source order of `.sidebar` and `.canvas` so menu items can easily be "tabbed" to. [#10](https://github.com/mmistakes/jekyll-theme-basically-basic/issues/10)
+- Refactor sidebar off-canvas menu and improve animation. [#9](https://github.com/mmistakes/jekyll-theme-basically-basic/issues/9) [#15](https://github.com/mmistakes/jekyll-theme-basically-basic/issues/15)
+- Remove tinted background from `<th>` elements.
+- Update permalink structure of `/docs` demo site.
+
+### Fixed
+- Fix `body` height and `.wrapper` box shadow. [#13](https://github.com/mmistakes/jekyll-theme-basically-basic/issues/13)
+- Fix unclickable main content links in Internet Explorer 10. [#9](https://github.com/mmistakes/jekyll-theme-basically-basic/issues/9)
+
+## [1.0.1] - 2017-03-23
+
+### Added
+- New responsive embed helper classes for videos. [#2](https://github.com/mmistakes/jekyll-theme-basically-basic/issues/2)
+- New print styles for improved readability of printed pages. [#4](https://github.com/mmistakes/jekyll-theme-basically-basic/pull/4)
+- Icon list to README.
+
+## [1.0.0] - 2017-03-20
