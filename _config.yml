@@ -1,7 +1,7 @@
-title: devlopr
-subtitle: A Portfolio Jekyll Theme Built for Developers
+title: juansamuelti
+subtitle: Cybersecurity Specialist
 description: >- # this means to ignore newlines until "baseurl:"
-  devlopr-jekyll is a beautiful Jekyll Theme Built For Developers, which is optimized for speed and readability.
+  Juan Samuel FP Web Pages
 
 url: "" # the base hostname & protocol for your site, e.g. https://example.github.io
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -26,11 +26,11 @@ urls:
 
 author_logo: profile.png
 author: Juan Samuel FP
-author_bio: Hi, my name is Juan Samuel. I built this site using devlopr-jekyll :D
-author_email: "mail@sujaykundu.com"
-author_location: India
-author_website_url: "https://sujaykundu.com"
-typewrite-text: devlopr is a jekyll framework built for developers. You can edit this in _config.yml file
+author_bio: Hi, my name is Juan Samuel and this is my website.
+author_email: "juansamuelfp@outlook.com"
+author_location: RD
+author_website_url: "https://juansamuelti.github.io"
+typewrite-text: Projects
 hero_cover_img: sample_cover.jpg # replace this for changing homepage cover (eg. try cover.jpeg). Image should be in /assets/img
 
 # Experiences
@@ -38,14 +38,14 @@ author_work_experiences:
             - company_name: Google
               company_logo: google.png
               company_url: https://google.com
-              designation: Software Engineer
-              description: Worked on various Google Products
+              designation: Cybersecurity Specialist
+              description: Projects
               visibility: true
             - company_name: Microsoft
               company_logo: microsoft.png
-              company_url: https://microsoft.com
-              designation: Azure Developer
-              description: Worked on various Azure Cloud Products
+              company_url: Link
+              designation: Technical Support
+              description: Website
               visibility: true
 
 # Education
@@ -71,16 +71,13 @@ author_project_details:
                 visibility: true
 
 # social links
-twitter_username: johndoe
-github_username:  sujaykundu777
-facebook_username: johndoe
-linkedin_username: johndoe
-behance_username: johndoe
-instagram_username: johndoe
-medium_username: johndoe
-telegram_username: johndoe
-dribbble_username: johndoe
-flickr_username: johndoe
+twitter_username: juansamuelti
+github_username:  juansamuelti
+facebook_username: Juan Samuel FP
+linkedin_username: juansamuelfp
+behance_username: juansamuelti
+instagram_username: juansamuelti
+
 
 #for comments ( we got Disqus and Hyvor Commenting, uncomment the one you want to use )
 
